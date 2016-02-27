@@ -12,8 +12,7 @@
 		if($_POST["contenu"] != "" AND $_POST["titre"] != ""){
 			$req = $bdd->prepare('INSERT INTO articles (titre,contenu,date) VALUES(?,?,NOW())');
 			$req->execute(array($_POST['titre'], $_POST['contenu']));
-			echo "ok";
-			echo $_POST['contenu'];
+			echo "Article envoyé !";
 		}
 		
 
