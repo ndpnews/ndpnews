@@ -99,8 +99,11 @@ background: url(images/header.jpg) left top no-repeat;
 #buttons a:hover {
 	text-decoration: underline;
 	background: linear-gradient(#B4AEA2,#897D67);
-	padding-top: 11px;
-	height: 34px;
+	padding-top: 6px;
+	height: 54px;
+	position: relative;
+	bottom: 14px;
+	
 }
 
 #content{
