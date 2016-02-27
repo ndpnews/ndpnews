@@ -1,0 +1,4 @@
+AuthName "Page d'administration du Site NDPNews"
+AuthType Basic
+AuthUserFile "/home/u893828718/public_html/admin"
+Require valid-user
