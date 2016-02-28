@@ -53,7 +53,7 @@
             <div id="left">
            	  <div class="tit_bot">
        		    <div class="tit">
-       		      <h1><span class="tit_span">Tableau des changements&nbsp;</span></h1>
+       		      <h1><span class="tit_span"><img src="images/square-matrix.png" style="width:15px;height:15px;">  Tableau des changements&nbsp;</span></h1>
        		    </div>
                 <div class="text">
                    	
@@ -79,7 +79,7 @@
 				  ?>
 				<div class="tit_bot">
        		    <div class="tit">
-       		      <h1><span class="tit_span"><?php echo $donnees['titre']; ?>&nbsp;</span></h1>
+       		      <h1><span class="tit_span"><img src="images/square-matrix.png" style="width:15px;height:15px;">  <?php echo $donnees['titre']; ?>&nbsp;</span></h1>
 				</div>
                   	<div class="text">
 					
@@ -116,8 +116,9 @@
 	</table>
 </div>
 
-			Copyright  2010<br />
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> | <a href="http://jigsaw.w3.org/css-validator/check/referer" title="This page validates as CSS"><abbr title="Cascading Style Sheets">CSS</abbr></a></div>
+			
+			<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            Copyright  2016    <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>  </div>
 
 
 				<!-- footer ends -->

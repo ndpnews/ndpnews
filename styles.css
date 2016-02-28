@@ -149,14 +149,12 @@ background: url(images/header.jpg) left top no-repeat;
 	font-weight: 100;
 	color: #001421;
 	text-align:left;
-	padding: 12px 0px 12px 28px;
-	background: url(images/tit_l.gif) 0px 0px no-repeat  ;
+	padding: 12px 0px 12px 14px;
 }
 
-.tit {
-background: url(images/tit_l2.gif) 0px 24px repeat-x ;}
+.tit {}
 
-.tit_span {background: #FFFFFF;
+.tit_span {background-color: transparent;
 font-weight:100;}
 
 #right H1{
@@ -199,7 +197,8 @@ margin-right: 3px;
 padding: 0px 0px 0px 0px;
 }
 
-.tit_bot { background: url(images/left_box.jpg) bottom repeat-x #FFFFFF;
+.tit_bot { background: linear-gradient(#FFFFFF,#565C60);
+
 padding: 0px 10px 0px 0px;}
 
 #footer{
