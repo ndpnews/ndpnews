@@ -73,7 +73,7 @@
 			  include_once('admin/bdd.php');
 			  global $bdd;
 			  
-			  $req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM articles ORDER BY date DESC LIMIT 0, 10');
+			  $req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_fr FROM articles ORDER BY date DESC LIMIT 0, 10');
 			  while($donnees = $req->fetch())
 			  {
 				  ?>
@@ -83,7 +83,7 @@
 				</div>
                   	<div class="text">
 					
-                    	<?php echo $donnees['date']; ?>
+                    	<?php echo $donnees['date_fr']; ?>
 						<br>
 						<?php echo $donnees['contenu']; ?>
 						
