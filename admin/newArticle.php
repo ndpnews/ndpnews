@@ -25,6 +25,7 @@
 			$req = $bdd->prepare('INSERT INTO articles (titre,contenu,date) VALUES(?,?,NOW())');
 			$req->execute(array($_POST['titre'], $_POST['contenu']));
 			echo "Article envoyé !";
+			echo "<br>";
 		}
 		
 

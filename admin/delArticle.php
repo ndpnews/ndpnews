@@ -22,7 +22,7 @@
 				$req = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%i\') AS date_fr FROM articles ORDER BY date DESC');
 				while($donnees = $req->fetch())
 				{
-					?><p><?php echo $donnees['titre']; ?><button type="button" class="btn btn-danger" onclick="
+					?><p><?php echo $donnees['titre']; ?>  <button type="button" class="btn btn-danger" onclick="
 					var r = confirm('Etes-vous sûr ?');
 					if (r == true)
 					{
