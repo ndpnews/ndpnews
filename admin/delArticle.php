@@ -16,9 +16,21 @@
 	</head>
 	<body>
 		<div class="container">
+		<h1>Suppression d'articles</h1>
 			<?php
+			
+			
 				include_once('bdd.php');
 				global $bdd;
+				
+				if($_GET['id'] != "")
+			{
+			$req = $bdd->prepare('DELETE FROM articles WHERE id = :id');
+			$req->execute(array('id' => $_GET['id']));
+			echo('Article supprimé');
+			echo('<br>');
+			}
+			
 				$req = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%i\') AS date_fr FROM articles ORDER BY date DESC');
 				while($donnees = $req->fetch())
 				{
