@@ -3,6 +3,8 @@
 	<head>
 		<script src="//cdn.ckeditor.com/4.5.7/full/ckeditor.js"></script>
 		<meta charset="utf-8">
+		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -29,6 +31,7 @@
 		?>
 		<a href="index.php">Retour</a>
 		<h1>Créer un nouvel article</h1>
+		
 		
 		<form method="post" action="newArticle.php" class="col-lg-12">
 
