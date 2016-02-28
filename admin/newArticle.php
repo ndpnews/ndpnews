@@ -3,8 +3,18 @@
 	<head>
 		<script src="//cdn.ckeditor.com/4.5.7/full/ckeditor.js"></script>
 		<meta charset="utf-8">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 	</head>
 	<body>
+	<div class="container">
 		<?php
 		include_once('bdd.php');
 		global $bdd;
@@ -17,13 +27,16 @@
 		
 
 		?>
-		
+		<a href="index.php">Retour</a>
 		<h1>Créer un nouvel article</h1>
-		<form method="post" action="newArticle.php">
-			Titre : <input type="text" name="titre"><br>
-			Article : <textarea name="contenu" id="editor1" rows="10" cols="80"></textarea>
-			<br>
-			<input type="submit" value="Créer" >
+		
+		<form method="post" action="newArticle.php" class="col-lg-12">
+
+			<legend>Nouvel article</legend>
+				Titre : <input type="text" name="titre" class="form-control">
+				Article : <textarea name="contenu" id="editor1" rows="10" cols="80" classe="formcontrol"></textarea>
+				
+				<br><input type="submit" value="Créer" >
 		</form>
 		
 		<script>
@@ -31,5 +44,7 @@
                 // instance, using default configuration.
                 CKEDITOR.replace( 'editor1' );
            </script>
+		   
+		<div>
 	</body>
 <html>
