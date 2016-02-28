@@ -69,33 +69,36 @@
 					</div><br />
            	  	</div>
            	  </div>
-              <div class="tit_bot">
+			  <?php
+			  include_once('admin/bdd.php');
+			  global $bdd;
+			  
+			  $req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM articles ORDER BY date DESC LIMIT 0, 10');
+			  while($donnees = $req->fetch())
+			  {
+				  ?>
+				<div class="tit_bot">
        		    <div class="tit">
-       		      <h1><span class="tit_span">Web Design Starter's Guide</span></h1></div>
-                  	<div class="text"><ol>
-              				<li><a href="">More Profesional Design</a></li>
-              				<li><a href="">Flash Templates</a></li>
-                      <li><a href="">Top Hosting Providers</a></li>
-                      <li><a href="">Support For Profesional Design</a></li>             
-		                   </ol>                    	
-                    	<br />
-           	  	</div>
-           	  </div>
-                <div class="tit_bot">
-           	  </div>
-							<div class="tit_bot">
-       		    <div class="tit">
-       		      <h1><span class="tit_span">Profesional Design&nbsp;</span></h1></div>
+       		      <h1><span class="tit_span"><?php echo $donnees['titre']; ?>&nbsp;</span></h1>
+				</div>
                   	<div class="text">
-                    	<img src="images/img2.jpg" width="124" height="94" class="img" alt="" /><span class="left_span">Fusce ac arcu porta eros tempor sodales id ut est. </span> <br />
-                    	Quisque nec eros vel enim laoreet adipiscing sed nec massa. Aliquam metus nisi, mattis non tincidunt et, facilisis vel dolor. Donec venenatis dictum adipiscing. Curabitur accumsan elit vel metus rutrum quis euismod leo vehicula. Suspendisse vel ligula ut felis adipiscing molestie. Suspendisse facilisis scelerisque sagittis. Proin nulla nibh, gravida suscipit venenatis feugiat, egestas vitae sapien. Sed blandit, dolor nec <br />
-                        tristique tempor, magna velit molestie dolor, eget mollis libero magna et nisi. Integer ligula mi, mattis ut cursus in, convallis pulvinar lacus. Vivamus eget dolor eget velit laoreet placerat vitae sed nibh. Etiam justo libero, facilisis eu pellentesque ut, tincidunt non mauris. 
+					
+                    	<?php echo $donnees['date']; ?>
+						<br>
+						<?php echo $donnees['contenu']; ?>
+						
+						
                     	<br />
-                    	<div class="read"><a href="#"><img src="images/b_read.gif" alt="" /></a></div>
-                    	<br />
-           	  	</div>
-           	  </div>
+					</div>
+           	    </div>
+				<?php
+			  }
+				?>
             </div>
+			<?php
+			// Fin de la boucle des billets
+			$req->closeCursor();
+			?>
             <br />
             <div style="clear: both"><img src="images/spaser.gif" alt="" width="1" height="1" /></div>
          <!-- footer begins -->
