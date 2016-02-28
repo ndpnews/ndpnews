@@ -14,6 +14,7 @@
 
 	</head>
 	<body>
+	<a href="/">Retour à l'accueil</a>
 		<h1>Gestion des articles</h1>
 		<a href="newArticle.php">Créer un nouvel article</a>
 		
