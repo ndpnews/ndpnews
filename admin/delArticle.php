@@ -1,6 +1,7 @@
 <html>
 	<head>
-		<title>Articles</title>
+		<script src="//cdn.ckeditor.com/4.5.7/full/ckeditor.js"></script>
+		<meta charset="utf-8">
 		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 
 		<!-- Latest compiled and minified CSS -->
@@ -14,10 +15,28 @@
 
 	</head>
 	<body>
-	<a href="/">Retour à l'accueil</a>
-		<h1>Gestion des articles</h1>
-		<a href="newArticle.php">Créer un nouvel article</a><br>
-		<a href="delArticle.php">Supprimer un article</a>
+		<div class="container">
+			<?php
+				include_once('bdd.php');
+				global $bdd;
+				$req = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d/%m/%Y Ã  %Hh%i\') AS date_fr FROM articles ORDER BY date DESC');
+				while($donnees = $req->fetch())
+				{
+					?><p><?php echo $donnees['titre']; ?><button type="button" class="btn btn-danger" onclick="
+					var r = confirm('Etes-vous sÃ»r ?');
+					if (r == true)
+					{
+						var id = '<?php echo $donnees['id']; ?>'
+						var text = 'delArticle.php?id=';
+						document.location.href=text+id;
+					}
+						">Supprimer</button></p>
+				<?php
+				}
 		
-	</body>
-</html>
+		?>
+		
+		</div>
+	</html>
+
+<html>
