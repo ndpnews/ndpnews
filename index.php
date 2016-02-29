@@ -65,7 +65,7 @@
 					- Mise en place du système d'articles<br>
 					
 					</p> 
-					<div class="read"><a href="#"><img src="images/b_read.gif" alt="" /></a>
+					<div class="read"><a href="#"><img src="images/add.png" alt="" style="width:25px;height:25px;"/></a>
 					</div><br />
            	  	</div>
            	  </div>
@@ -87,7 +87,8 @@
 						<br>
 						<?php echo substr($donnees['contenu'], 0, 100; ?>
 						
-						
+						<div class="read"><a href="#"><img src="images/add.png" alt="" style="width:25px;height:25px;"/></a>
+						</div>
                     	<br />
 					</div>
            	    </div>
