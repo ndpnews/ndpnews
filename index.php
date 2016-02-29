@@ -85,7 +85,7 @@
 					
                     	<?php echo $donnees['date_fr']; ?>
 						<br>
-						<?php echo $donnees['contenu']; ?>
+						<?php echo substr($donnees['contenu'], 0, 100; ?>
 						
 						
                     	<br />
