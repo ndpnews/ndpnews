@@ -87,7 +87,7 @@
 						<br>
 						<?php echo substr($donnees['contenu'], 0, 100; ?>
 						
-						<div class="read"><a href="#"><img src="images/add.png" alt="" style="width:25px;height:25px;"/></a>
+						<div class="read"><a href="article.php?id=<?php echo $donnees['id']; ?>"><img src="images/add.png" alt="" style="width:25px;height:25px;"/></a>
 						</div>
                     	<br />
 					</div>
