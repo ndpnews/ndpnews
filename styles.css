@@ -43,26 +43,15 @@ body{
 #header { 
 width:1014px;
 padding: 0px 0px 0px 0px;
-background: url(images/header.jpg) left top no-repeat;
+background-image: url("images/cloitre.jpg");
+background-repeat: no-repeat;
 }
 
-#logo {	font-family: Arial, Helvetica, sans-serif;
-		color:#FFFFFF;
-		font-size:18px;
-		font-style:italic;
-		padding: 70px 0px 0px 642px;
-		background: url(images/big_img.jpg) left top no-repeat;
-		height: 173px;
-}
 
-#logo a {
-	text-decoration: none;
-	text-transform: lowercase;
-	font-style: italic;
-	font-size: 18px;
-	color: #FFFFFF;
-}
 
+#logo{
+	text-align: center;
+}
 
 #logo H2 a{
 	font-size: 12px;
