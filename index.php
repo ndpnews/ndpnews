@@ -85,7 +85,7 @@
 					
                     	<?php echo $donnees['date_fr']; ?>
 						<br>
-						<?php echo strip_tags(substr($donnees['contenu'], 0, 300)); ?>
+						<?php echo strip_tags(substr($donnees['contenu'], 0, 300), '<br>'); ?>
 						
 						<div class="read"><a href="article.php?id=<?php echo $donnees['id']; ?>"><img src="images/add.png" alt="" style="width:25px;height:25px;"/></a>
 						</div>
