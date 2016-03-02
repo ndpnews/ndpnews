@@ -16,7 +16,7 @@
 <div id="main">
 <!-- header begins -->
 <div id="header">
-    <div id="logo">  </div>
+    <div id="logo"> <img src="images/logo.png"/>  </div>
     <div id="buttons">
           <a href="#" class="but"  title="">Accueil</a>
           <a href="#" class="but" title="">Atelier Coding</a>
