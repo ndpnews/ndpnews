@@ -1,6 +1,7 @@
-﻿<html>
+<html>
+
 	<head>
-		<title>Articles</title>
+		<script src="//cdn.ckeditor.com/4.5.7/full/ckeditor.js"></script>
 		<meta charset="utf-8">
 		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 
@@ -15,11 +16,10 @@
 
 	</head>
 	<body>
-	<a href="/">Retour à l'accueil</a>
-		<h1>Gestion des articles</h1>
-		<a href="newArticle.php">Créer un nouvel article</a><br>
-		<a href="delArticle.php">Supprimer un article</a>
-		<a href="editArticle.php">Editer un article</a>
-		
+	<div class="container">
+	
+	
+	
+	</div>
 	</body>
 </html>
