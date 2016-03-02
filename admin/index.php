@@ -1,6 +1,7 @@
-<html>
+ï»¿<html>
 	<head>
 		<title>Articles</title>
+		<meta charset="utf-8">
 		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 
 		<!-- Latest compiled and minified CSS -->
@@ -14,10 +15,11 @@
 
 	</head>
 	<body>
-	<a href="/">Retour à l'accueil</a>
+	<a href="/">Retour Ã  l'accueil</a>
 		<h1>Gestion des articles</h1>
-		<a href="newArticle.php">Créer un nouvel article</a><br>
+		<a href="newArticle.php">CrÃ©er un nouvel article</a><br>
 		<a href="delArticle.php">Supprimer un article</a>
+		<a href="editArticle.php">Editer un article</a>
 		
 	</body>
 </html>
