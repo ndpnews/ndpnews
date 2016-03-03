@@ -17,7 +17,21 @@
 	</head>
 	<body>
 	<div class="container">
-	
+		<h1>Edition d'article</h1>
+		<?php
+			
+			
+				include_once('bdd.php');
+				global $bdd;
+				
+				$req = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%i\') AS date_fr FROM articles ORDER BY date DESC');
+				while($donnees = $req->fetch())
+				{
+					?><p><?php echo $donnees['titre']; ?> <?php echo $donnees['date_fr']; ?> <a href="modifArticle.php?id=<?php echo $donnees['date_fr']; ?>" > "<button type="button" class="btn btn-primary">Editer</button></a></p>
+				<?php
+				}
+		
+		?>
 	
 	
 	</div>
