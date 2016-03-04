@@ -30,6 +30,13 @@
 			
 		}
 		?>
+		<?php if($_POST["contenu"] != "" AND $_POST["titre"] != "")
+		{
+			$req = $bdd->prepare('UPDATE articles SET (titre,contenu,date) VALUES(?,?,NOW())');
+			$req->execute(array($_POST['titre'], $_POST['contenu']));
+			echo "Article envoyé !";
+			echo "<br>";
+		}
 		
 		<form method="post" action="modifArticle.php" class="col-lg-12">
 
