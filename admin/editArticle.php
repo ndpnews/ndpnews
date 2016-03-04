@@ -1,7 +1,6 @@
 <html>
 
 	<head>
-		<script src="//cdn.ckeditor.com/4.5.7/full/ckeditor.js"></script>
 		<meta charset="utf-8">
 		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 
@@ -27,7 +26,7 @@
 				$req = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%i\') AS date_fr FROM articles ORDER BY date DESC');
 				while($donnees = $req->fetch())
 				{
-					?><p><?php echo $donnees['titre']; ?> <?php echo $donnees['date_fr']; ?> <a href="modifArticle.php?id=<?php echo $donnees['date_fr']; ?>"><button type="button" class="btn btn-primary">Editer</button></a></p>
+					?><p><?php echo $donnees['titre']; ?> <?php echo $donnees['date_fr']; ?> <a href="modifArticle.php?id=<?php echo $donnees['id']; ?>"><button type="button" class="btn btn-primary">Editer</button></a></p>
 				<?php
 				}
 		
