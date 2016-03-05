@@ -101,21 +101,10 @@
 			$req->closeCursor();
 			?>
             <br />
-            <div style="clear: both"><img src="images/spaser.gif" alt="" width="1" height="1" /></div>
          <!-- footer begins -->
             <div id="footer">
 
-<div align="center">
-	<table align="center" cellspacing="0" cellpadding="5" border="0" style="margin: -18px 0px -10px 0px;">
-		<tr valign="middle">
-			<td nowrap="nowrap"><a href="http://www.hosting24.com/" target="_blank" style="text-decoration: none;"><img alt="Web hosting" src="images/img_link_01.png" height="15" width="80" border="0" /></a></td>
-			<td nowrap="nowrap"><a href="http://www.youhosting.com/" target="_blank" style="text-decoration: none;"><img alt="Reseller hosting" src="images/img_link_02.png" height="15" width="80" border="0" /></a></td>
-			<td nowrap="nowrap"><a href="http://www.vps.me/" target="_blank" style="text-decoration: none;"><img alt="VPS hosting" src="images/img_link_03.png" height="15" width="80" border="0" /></a></td>
-			<td nowrap="nowrap"><a href="http://www.hostinger.com/" target="_blank" style="text-decoration: none;"><img alt="Web Hosting" src="images/img_link_04.png" height="15" width="80" border="0" /></a></td>
-			<td nowrap="nowrap"><a href="http://www.boxbilling.com/" target="_blank" style="text-decoration: none;"><img alt="Billing software" src="images/img_link_05.png" height="25" width="54" border="0" /></a></td>
-		</tr>
-	</table>
-</div>
+
 
 			
 			<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>

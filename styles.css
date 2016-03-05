@@ -192,13 +192,14 @@ padding: 0px 0px 0px 0px;
 padding: 0px 10px 0px 0px;}
 
 #footer{
-	height: 57px;
+	height: auto;
 	width: 100%;
 	font-size: 12px;
 	color: #FFFFFF;
 	text-align: center;
 	clear:both;
-	padding: 18px 0px 0px 0px;
+	padding-top :5px;
+	padding-bottom: 5px;
 	background: url(images/footer.jpg) top repeat-x;
 }
 
