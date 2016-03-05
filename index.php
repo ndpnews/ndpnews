@@ -16,7 +16,7 @@
 <div id="main">
 <!-- header begins -->
 <div id="header">
-    <div id="logo"> <img src="images/logo.png"/>  </div>
+    <div id="logo"> <img  style="width:1009px;"src="images/logo.png"/>  </div>
     <div id="buttons">
           <a href="index.php" class="but"  title="">Accueil</a>
           <a href="#" class="but" title="">Atelier Coding</a>
