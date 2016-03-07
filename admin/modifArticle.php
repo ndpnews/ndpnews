@@ -17,7 +17,7 @@
 	</head>
 	<body>
 	<div class="container">
-	<a href="admin/index.php">Retour à l'accueil</a>
+	<a href="/admin/index.php">Retour à l'accueil</a>
 		<h1>Edition d'article</h1>
 		<?php
 		include_once('bdd.php');
