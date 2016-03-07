@@ -51,24 +51,6 @@
               
            	</div>  
             <div id="left">
-           	  <div class="tit_bot">
-       		    <div class="tit">
-       		      <h1><span class="tit_span"><img src="images/square-matrix.png" style="width:15px;height:15px;">  Tableau des changements&nbsp;</span></h1>
-       		    </div>
-                <div class="text">
-                   	
-					Changements effectués : </br>
-					- <a href="https://github.com/ndpnews/ndpnews">Dépôt sur Github</a> <br>
-					- Changement des titres du style <br>
-					- Amélioration du thème des boutons <br>
-					- Reamélioration du hovering des boutons<br>
-					- Mise en place du système d'articles<br>
-					
-					</p> 
-					<div class="read"><a href="#"><img src="images/add.png" alt="" style="width:25px;height:25px;"/></a>
-					</div><br />
-           	  	</div>
-           	  </div>
 			  <?php
 			  include_once('admin/bdd.php');
 			  global $bdd;
