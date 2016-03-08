@@ -26,6 +26,7 @@
 		  <a href="#" class="but" title="">Créer un site web</a>
 		  <a href="#" class="but" title="">Tuto en vidéo</a>
 		  <a href="#" class="but" title="">HTML Editor</a>
+		  <a href="#" class="but" title="">SVG Editor</a>
     </div>
 </div>
 <!-- header ends -->
