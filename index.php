@@ -35,7 +35,7 @@
     	<div id="content">
         	<div id="right">
             	
-            	<h1>Profesioanl Design</h1>
+            	
                 <div class="right_b"><span class="right_span">Morbi sit amet fringilla dolor. </span><br />
                   Phasellus tempor elementum metus vitae imperdiet. Nulla orci neque, convallis sed suscipit nec, iaculis nec odio. Phasellus sagittis sodales semper. Integer aliquam lectus a lectus mollis mollis rhoncus felis vestibulum. Etiam faucibus ipsum acmetus vehicula porttitor.<br />
                     <div class="read"><a href="#">read more</a></div><br />
