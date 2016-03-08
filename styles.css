@@ -1,4 +1,7 @@
-
+@keyframes main {
+    from {margin-top: 1000px;}
+    to {margin-top: 0px;}
+}
 
 *
 {
@@ -35,9 +38,12 @@ body{
 
 #main {
 	width: 1009px;
-	margin: 0px auto;
 	padding: 0px 0px 0px 0px;
+	margin: 0px auto;
 	border: 10px solid #FFFFFF;
+	animation-name : main;
+	animation-duration: 700ms;
+	animation-timing-function: ease;
 }
 
 #header { 
