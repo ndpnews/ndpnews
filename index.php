@@ -10,12 +10,14 @@
 <!-- Image Preloader -->
 <script type="text/javascript" src="http://ajax.googlesapi.com/ajax/libs/jquery/jquery.min.js"></script>
 
+	<link rel="icon" type="image/png" href="images/favicon.png" />
 </head>
 <body>
 
 <div id="main">
 <!-- header begins -->
 <div id="header">
+
     <div id="logo"> <img  style="width:1009px;"src="images/logo.png"/>  </div>
     <div id="buttons">
           <a href="index.php" class="but"  title="">Accueil</a>
