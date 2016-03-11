@@ -33,15 +33,22 @@
 </div>
 <!-- header ends -->
     <!-- content begins -->
-    
+    <?php
+	
+			  include_once('admin/bdd.php');
+			  global $bdd;
+			  ?>
     	<div id="content">
         	<div id="right">
-              
+				<?php
+				$req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date, \'%d/%M\') AS date_fr FROM articles ORDER BY date DESC')
+				?>
+					
+					
+				
            	</div>  
             <div id="left">
 			  <?php
-			  include_once('admin/bdd.php');
-			  global $bdd;
 			  
 			  $req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%i\') AS date_fr FROM articles ORDER BY date DESC LIMIT 0, 10');
 			  while($donnees = $req->fetch())
