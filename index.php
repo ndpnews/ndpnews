@@ -40,15 +40,20 @@
 			  ?>
     	<div id="content">
         	<div id="right">
+			<div class="tit_bot">
+				<div class="tit">
+       		      <h1><span class="tit_span"><img src="images/square-matrix.png" style="width:15px;height:15px;">  Archives&nbsp;</span></h1>
+				</div>
+					<div class="text">
 				<?php
 				$req1 = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d %M\') AS date_fr FROM articles ORDER BY date DESC');
 				while($donnees = $req1->fetch())
 				{
-				echo $donnees['date_fr'];echo $donnees['titre'];
+				echo $donnees['date_fr'];?> - <?php echo $donnees['titre'];?><br><?php
 				}
 				?>
-					
-					
+					</div>
+			</div>		
 				
            	</div>  
             <div id="left">
