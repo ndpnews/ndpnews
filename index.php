@@ -77,7 +77,7 @@
                   	<div class="text">
 					
                     	<?php echo $donnees['date_fr']; ?><br>
-			<?php echo $donnees['auteur']; ?>
+			<b><?php echo $donnees['auteur']; ?><b>
 						<br>
 						<?php echo strip_tags(substr($donnees['contenu'], 0, 300), '<br><p>'); ?>...
 						
