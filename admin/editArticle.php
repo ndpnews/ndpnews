@@ -26,10 +26,10 @@
 				include_once('bdd.php');
 				global $bdd;
 				
-				$req = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%i\') AS date_fr FROM articles ORDER BY date DESC');
+				$req = $bdd->query('SELECT id, titre, auteur, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%i\') AS date_fr FROM articles ORDER BY date DESC');
 				while($donnees = $req->fetch())
 				{
-					?><p><?php echo $donnees['titre']; ?> <?php echo $donnees['date_fr']; ?> <a href="modifArticle.php?id=<?php echo $donnees['id']; ?>"><button type="button" class="btn btn-primary">Editer</button></a></p>
+					?><p><?php echo $donnees['titre']; ?> de <?php echo $donnees['auteur']; ?> <?php echo $donnees['date_fr']; ?> <a href="modifArticle.php?id=<?php echo $donnees['id']; ?>"><button type="button" class="btn btn-primary">Editer</button></a></p>
 				<?php
 				}
 		

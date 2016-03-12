@@ -27,17 +27,17 @@
 		global $bdd;
 		
 		if($_GET['id'] != ""){
-			$req = $bdd->prepare('SELECT titre, contenu, id FROM articles WHERE id = ?');
+			$req = $bdd->prepare('SELECT titre, contenu, id, auteur FROM articles WHERE id = ?');
 			$req->execute(array($_GET['id']));
 			
 			$donnees = $req->fetch();
 			
 		}
 		?>
-		<?php if($_POST["contenu"] != "" AND $_POST["titre"] != "")
+		<?php if($_POST['auteur'] != "" AND $_POST["contenu"] != "" AND $_POST["titre"] != "")
 		{
-			$req = $bdd->prepare('UPDATE articles SET titre = ?,contenu = ? WHERE id = ?');
-			$req->execute(array($_POST['titre'], $_POST['contenu'], $_POST['id']));
+			$req = $bdd->prepare('UPDATE articles SET titre = ?,contenu = ?, auteur = ? WHERE id = ?');
+			$req->execute(array($_POST['titre'], $_POST['contenu'], $_POST['id'],$_POST['auteur']));
 			echo "Article envoyé !";
 			echo "<br>";
 		}
@@ -47,6 +47,7 @@
 
 			<legend>Nouvel article</legend>
 				Titre : <input type="text" name="titre" class="form-control" value="<?php echo $donnees['titre']; ?> ">
+				Auteur : <input type="text" name="auteur" class="form-control" value="<?php echo $donnees['auteur']; ?>">
 				Article : <textarea name="contenu" id="editor1" rows="10" cols="80" classe="formcontrol"><?php echo $donnees['contenu'];?></textarea>
 				<input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
 				<br><input type="submit" value="Modifier" >

@@ -24,9 +24,9 @@
 		include_once('bdd.php');
 		global $bdd;
 		
-		if($_POST["contenu"] != "" AND $_POST["titre"] != ""){
-			$req = $bdd->prepare('INSERT INTO articles (titre,contenu,date) VALUES(?,?,NOW())');
-			$req->execute(array($_POST['titre'], $_POST['contenu']));
+		if($_POST["contenu"] != "" AND $_POST['auteur'] != "" AND $_POST["titre"] != ""){
+			$req = $bdd->prepare('INSERT INTO articles (titre,contenu,date,auteur) VALUES(?,?,NOW())');
+			$req->execute(array($_POST['titre'], $_POST['contenu'], $_POST['auteur']));
 			echo "Article envoyé !";
 			echo "<br>";
 		}
@@ -41,6 +41,7 @@
 
 			<legend>Nouvel article</legend>
 				Titre : <input type="text" name="titre" class="form-control">
+				Auteur : <input type="text" name="auteur" class="form-control">
 				Article : <textarea name="contenu" id="editor1" rows="10" cols="80" classe="formcontrol"></textarea>
 				
 				<br><input type="submit" value="Créer" >

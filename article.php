@@ -61,7 +61,7 @@
             <div id="left">
 			  <?php
 			  
-			  $req = $bdd->prepare('SELECT id, titre, contenu, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%i\') AS date_fr FROM articles WHERE id = ?');
+			  $req = $bdd->prepare('SELECT id, titre, contenu, auteur, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%i\') AS date_fr FROM articles WHERE id = ?');
 			  $req->execute(array($_GET['id']));
 			  
 			  while($donnees = $req->fetch())
@@ -73,7 +73,8 @@
 				</div>
                   	<div class="text">
 					
-                    	<?php echo $donnees['date_fr']; ?>
+                    	<?php echo $donnees['date_fr']; ?><br>
+			<?php echo $donnees['auteur']; ?>
 						<br>
 						<?php echo $donnees['contenu'] ?>
 						
