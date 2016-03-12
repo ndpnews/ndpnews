@@ -42,7 +42,7 @@
         	<div id="right">
 			<div class="tit_bot">
 				<div class="tit">
-       		      <h1><span class="tit_span"><img src="images/square-matrix.png" style="width:15px;height:15px;">  Archives&nbsp;</span></h1>
+       		      <h1><span class="tit_span">  Archives&nbsp;</span></h1>
 				</div>
 					<div class="text">
 				<?php
