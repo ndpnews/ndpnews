@@ -37,7 +37,7 @@
 		<?php if($_POST['auteur'] != "" AND $_POST["contenu"] != "" AND $_POST["titre"] != "")
 		{
 			$req = $bdd->prepare('UPDATE articles SET titre = ?,contenu = ?, auteur = ? WHERE id = ?');
-			$req->execute(array($_POST['titre'], $_POST['contenu'], $_POST['id'],$_POST['auteur']));
+			$req->execute(array($_POST['titre'], $_POST['contenu'],$_POST['auteur'], $_POST['id']));
 			echo "Article envoyé !";
 			echo "<br>";
 		}
