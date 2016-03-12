@@ -50,12 +50,12 @@
 				</div>
 					<div class="text">
 				<?php
-				$req1 = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d %M\') AS date_fr FROM articles ORDER BY date DESC');
+				$req1 = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d %M %Y\') AS date_fr FROM articles ORDER BY date DESC');
 				while($donnees = $req1->fetch())
 				{
 				?><b><?php
 				$dateTime = strtotime($donnees['date_fr']);
-				$date = strftime("%d %B", $dateTime);
+				$date = strftime("%d %B %G", $dateTime);
 				echo $date;?></b> - <a href="article.php?id=<?php echo $donnees['id'];?>"><?php echo $donnees['titre'];?></a><br><?php
 				}
 				?>
