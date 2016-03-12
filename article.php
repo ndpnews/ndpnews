@@ -1,3 +1,7 @@
+<?php
+	date_default_timezone_set('Europe/Paris');
+	setlocale(LC_TIME, "fr_FR");
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -34,21 +38,23 @@
     
     	<div id="content">
         	<div id="right">
-            	
-            	<h1>Profesioanl Design</h1>
-                <div class="right_b"><span class="right_span">Morbi sit amet fringilla dolor. </span><br />
-                  Phasellus tempor elementum metus vitae imperdiet. Nulla orci neque, convallis sed suscipit nec, iaculis nec odio. Phasellus sagittis sodales semper. Integer aliquam lectus a lectus mollis mollis rhoncus felis vestibulum. Etiam faucibus ipsum acmetus vehicula porttitor.<br />
-                    <div class="read"><a href="#">read more</a></div><br />
-           	  </div>
-                <div class="right_b"><span class="right_span">Morbi sit amet fringilla dolor. </span><br />
-                  Phasellus tempor elementum metus vitae imperdiet. Nulla orci neque, convallis sed suscipit nec, iaculis nec odio. Phasellus sagittis sodales semper. Integer aliquam lectus a lectus mollis mollis rhoncus felis vestibulum. Etiam faucibus ipsum acmetus vehicula porttitor.<br />
-                    <div class="read"><a href="#">read more</a></div><br />
-           	  </div>
-								<div class="right_b"><span class="right_span">Morbi sit amet fringilla dolor. </span><br />
-                  Phasellus tempor elementum metus vitae imperdiet. Nulla orci neque, convallis sed suscipit nec, iaculis nec odio. Phasellus sagittis sodales semper. Integer aliquam lectus a lectus mollis mollis rhoncus felis vestibulum. Etiam faucibus ipsum acmetus vehicula porttitor.<br />
-                    <div class="read"><a href="#">read more</a></div><br />
-           	  </div>
-              
+            <div class="tit_bot">
+				<div class="tit">
+       		      <h1><span class="tit_span">  Archives&nbsp;</span></h1>
+				</div>
+					<div class="text">
+				<?php
+				$req1 = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d %M %Y\') AS date_fr FROM articles ORDER BY date DESC');
+				while($donnees = $req1->fetch())
+				{
+				?><b><?php
+				$dateTime = strtotime($donnees['date_fr']);
+				$date = strftime("%d %B %G", $dateTime);
+				echo $date;?></b> - <a href="article.php?id=<?php echo $donnees['id'];?>"><?php echo $donnees['titre'];?></a><br><?php
+				}
+				?>
+					</div>
+			</div>	
            	</div>  
             <div id="left">
 			  <?php
@@ -88,17 +94,6 @@
          <!-- footer begins -->
             <div id="footer">
 
-<div align="center">
-	<table align="center" cellspacing="0" cellpadding="5" border="0" style="margin: -18px 0px -10px 0px;">
-		<tr valign="middle">
-			<td nowrap="nowrap"><a href="http://www.hosting24.com/" target="_blank" style="text-decoration: none;"><img alt="Web hosting" src="images/img_link_01.png" height="15" width="80" border="0" /></a></td>
-			<td nowrap="nowrap"><a href="http://www.youhosting.com/" target="_blank" style="text-decoration: none;"><img alt="Reseller hosting" src="images/img_link_02.png" height="15" width="80" border="0" /></a></td>
-			<td nowrap="nowrap"><a href="http://www.vps.me/" target="_blank" style="text-decoration: none;"><img alt="VPS hosting" src="images/img_link_03.png" height="15" width="80" border="0" /></a></td>
-			<td nowrap="nowrap"><a href="http://www.hostinger.com/" target="_blank" style="text-decoration: none;"><img alt="Web Hosting" src="images/img_link_04.png" height="15" width="80" border="0" /></a></td>
-			<td nowrap="nowrap"><a href="http://www.boxbilling.com/" target="_blank" style="text-decoration: none;"><img alt="Billing software" src="images/img_link_05.png" height="25" width="54" border="0" /></a></td>
-		</tr>
-	</table>
-</div>
 
 			
 			<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
