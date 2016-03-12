@@ -41,7 +41,11 @@
     	<div id="content">
         	<div id="right">
 				<?php
-				$req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date, \'%d/%M\') AS date_fr FROM articles ORDER BY date DESC')
+				$req1 = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d %M\') AS date_fr FROM articles ORDER BY date DESC');
+				while($donnees = $req1->fetch())
+				{
+				echo $donnees['date_fr'];echo $donnees['titre'];
+				}
 				?>
 					
 					
