@@ -66,7 +66,7 @@
             <div id="left">
 			  <?php
 			  
-			  $req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%i\') AS date_fr FROM articles ORDER BY date DESC LIMIT 0, 10');
+			  $req = $bdd->query('SELECT id, titre, contenu, auteur, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%i\') AS date_fr FROM articles ORDER BY date DESC LIMIT 0, 10');
 			  while($donnees = $req->fetch())
 			  {
 				  ?>
@@ -76,7 +76,8 @@
 				</div>
                   	<div class="text">
 					
-                    	<?php echo $donnees['date_fr']; ?>
+                    	<?php echo $donnees['date_fr']; ?><br>
+			<?php echo $donnees['auteur']; ?>
 						<br>
 						<?php echo strip_tags(substr($donnees['contenu'], 0, 300), '<br><p>'); ?>...
 						
