@@ -1,5 +1,6 @@
 <?php
 	date_default_timezone_set('Europe/Paris');
+	setlocale(LC_TIME, "fr_FR");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -52,7 +53,10 @@
 				$req1 = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d %M\') AS date_fr FROM articles ORDER BY date DESC');
 				while($donnees = $req1->fetch())
 				{
-				echo $donnees['date_fr'];?> - <?php echo $donnees['titre'];?><br><?php
+				?><b><?php
+				$dateTime = strtotime($donnees['date_fr']);
+				$date = strftime("%d %B", $dateTime);
+				echo $date;?></b> - <a href="article.php?id=<?php echo $donnees['id'];?>"><?php echo $donnees['titre'];?></a><br><?php
 				}
 				?>
 					</div>
