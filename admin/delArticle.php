@@ -1,3 +1,6 @@
+<?php
+	date_default_timezone_set('Europe/Paris');
+?>
 <html>
 	<head>
 		<script src="//cdn.ckeditor.com/4.5.7/full/ckeditor.js"></script>
