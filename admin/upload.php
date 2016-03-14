@@ -34,7 +34,7 @@
 		 
 
 			}
-		}
+		
 	?>
 		<h1>Upload de fichiers</h1>
 		<br>

@@ -22,7 +22,7 @@
 		<h1>Gestion des articles</h1>
 		<a href="newArticle.php">Créer un nouvel article</a><br>
 		<a href="delArticle.php">Supprimer un article</a><br>
-		<a href="editArticle.php">Editer un article</a>
+		<a href="editArticle.php">Editer un article</a><br>
 		<a href="upload.php">Envoyer une photo</a>
 		
 	</body>
