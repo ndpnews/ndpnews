@@ -26,7 +26,7 @@
 					$extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
 					if (in_array($extension_upload, $extensions_autorisees))
 					{
-						move_uploaded_file($_FILES['fichier']['tmp_name'], '../images/uploads/' . basename($_FILES['fichier']['name']));
+						move_uploaded_file($_FILES['fichier']['tmp_name'], '/home/u893828718/public_html/images/uploads/' . basename($_FILES['fichier']['name']));
                         echo "L'envoi a bien été effectué !";
 					}
 
