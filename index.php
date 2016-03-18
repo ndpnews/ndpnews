@@ -76,11 +76,7 @@
                     	<?php echo $donnees['date_fr']; ?><br>
 			<b><?php echo $donnees['auteur']; ?></b>
 						<br>
-						<?php echo strip_tags(substr($donnees['contenu'], 0, 300), '<br><p>');
-							$pos1 = strpos($donnees['contenu'], '<img');
-							$pos2 = strpos($donnees['contenu'], '>', $pos1);
-							$img = substr($donnees['contenu'], $pos1, $pos2);
-							echo $img;?>...
+						<?php echo strip_tags(substr($donnees['contenu'], 0, 300), '<br><p>'); ?>...
 						
 						<div class="read"><a href="article.php?id=<?php echo $donnees['id']; ?>"><img src="images/add.png" alt="" style="width:25px;height:25px;"/></a>
 						</div>
