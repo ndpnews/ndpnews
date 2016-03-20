@@ -12,7 +12,7 @@
 border: 0;
 margin: 0;
 }
-input {
+.invisible {
   display: none;
 }
 
@@ -23,7 +23,7 @@ li {
   padding: 0.2em;
 }
 
-.invisible {
+input ~ ul {
  display: none;
 }
 input:checked ~ ul {
