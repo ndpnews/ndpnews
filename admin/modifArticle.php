@@ -22,6 +22,7 @@
 	<div class="container">
 	<a href="/admin/index.php">Retour à l'accueil</a>
 		<h1>Edition d'article</h1>
+		<p>(Veillez à ne pas dépasser 640px de longueur lorsque vous mettez une image (Vous pouvez régler cela lorsque vous insérez l'image))</p>
 		<?php
 		include_once('bdd.php');
 		global $bdd;
