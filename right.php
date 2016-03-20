@@ -2,7 +2,7 @@
 				<div class="tit">
        		      <h1><span class="tit_span">  Archives&nbsp;</span></h1>
 				</div>
-					<div class="text">
+					<div class="text" style="padding: 0px">
 				<?php
 				$req1 = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d %M %Y\') AS date_fr FROM articles ORDER BY date DESC');
 				//Premier fetch
