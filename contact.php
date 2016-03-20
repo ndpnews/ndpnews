@@ -43,8 +43,8 @@
 		</div>
 		<div class="text">
 			<form method="post" action="contact.php">
-				Votre E-Mail : <input type="text" name="email">
-				Votre message : <textarea name="message" rows="10" cols="50">
+				Votre E-Mail : <input type="text" name="email"><br>
+				Votre message : <textarea name="message" rows="10" cols="50"></textarea>
 				<input type="submit" value="Envoyer !">
 			
 			</form>
