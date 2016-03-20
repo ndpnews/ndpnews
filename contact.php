@@ -53,6 +53,7 @@
 			'X-Mailer: PHP/' . phpversion();
 
 			mail($to, $subject, $message, $headers);
+			echo 'Message envoyé';
 		}
 		
 		
