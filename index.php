@@ -50,7 +50,7 @@
        		    <div class="tit">
        		      <h1><span class="tit_span"><img src="images/square-matrix.png" style="width:15px;height:15px;">  <?php echo $donnees['titre']; ?>&nbsp;</span></h1>
 				</div>
-                  	<div class="text">
+                  	<div class="text" style="padding: 0px">
 					
                     	<?php echo $donnees['date_fr']; ?><br>
 			<b><?php echo $donnees['auteur']; ?></b>
