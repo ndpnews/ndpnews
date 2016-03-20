@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<div id="main">
+<div id="main2">
 <!-- header begins -->
 <div id="header">
     <?php include('header.php');?>

@@ -2,6 +2,10 @@
     from {margin-top: 1000px;}
     to {margin-top: 0px;}
 }
+@keyframes main2 {
+    from {margin-left: 2000px;}
+    to {margin-top: 437px;}
+}
 
 *
 {
@@ -68,6 +72,16 @@ body{
 	margin: 0px auto;
 	border: 10px solid #FFFFFF;
 	animation-name : main;
+	animation-duration: 700ms;
+	animation-timing-function: ease;
+}
+
+#main2 {
+	width: 1009px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px auto;
+	border: 10px solid #FFFFFF;
+	animation-name : main2;
 	animation-duration: 700ms;
 	animation-timing-function: ease;
 }
