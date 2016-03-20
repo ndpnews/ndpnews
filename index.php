@@ -51,14 +51,66 @@
 					<div class="text">
 				<?php
 				$req1 = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d %M %Y\') AS date_fr FROM articles ORDER BY date DESC');
+				//Premier fetch
+				
+				$donnees = $req1->fetch();
+				?><ul>
+					<li><?php $dateTime = strtotime($donnees['date_fr']);$annee = strftime("%G", $dateTime);echo $annee;?>
+						<ul>
+							<li><?php $dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?>
+								<ul>
+									<li><b><?php
+												$dateTime = strtotime($donnees['date_fr']);
+												$date = strftime("%d", $dateTime);
+												echo $date;?></b> - <a href="article.php?id=<?php echo $donnees['id'];?>"><?php echo $donnees['titre'];?></a>
+									</li>
+									
+				<?php
+				//Fin
 				while($donnees = $req1->fetch())
 				{
-				?><b><?php
-				$dateTime = strtotime($donnees['date_fr']);
-				$date = strftime("%d %B %G", $dateTime);
-				echo $date;?></b> - <a href="article.php?id=<?php echo $donnees['id'];?>"><?php echo $donnees['titre'];?></a><br><?php
+					$dateTime = strtotime($donnees['date_fr']);
+					//Si c'est la même année
+					if($annee == strftime("%G", $dateTime)){
+						//Si c'est le même mois
+						if($mois == strftime("%B", $dateTime))
+						{
+							//Mettre l'article
+						?><li><b><?php
+									$dateTime = strtotime($donnees['date_fr']);
+											$date = strftime("%d", $dateTime);
+											echo $date;?></b> - <a href="article.php?id=<?php echo $donnees['id'];?>"><?php echo $donnees['titre'];?></a>
+							</li>
+						<?php
+						}
+						else
+							//Si c'est pas le même mois
+							//Mettre le nouveau mois puis l'article
+						{
+							?></ul></li><li><?php $dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?>
+							<ul><li><b><?php
+												$dateTime = strtotime($donnees['date_fr']);
+												$date = strftime("%d", $dateTime);
+												echo $date;?></b> - <a href="article.php?id=<?php echo $donnees['id'];?>"><?php echo $donnees['titre'];?></a>
+									</li>
+						<?php
+						}
+					}
+					else
+					{
+						//Si c'est pas la même année?>
+						</ul></li></ul></li><li><? $dateTime = strtotime($donnees['date_fr']);$annee = strftime("%G", $dateTime);echo $annee;?><ul>
+						<li><?php $dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?><ul>
+						<li><b><?php
+												$dateTime = strtotime($donnees['date_fr']);
+												$date = strftime("%d", $dateTime);
+												echo $date;?></b> - <a href="article.php?id=<?php echo $donnees['id'];?>"><?php echo $donnees['titre'];?></a>
+									</li>
+					<?php	
+					}
+					
 				}
-				?>
+				?></ul></li></ul></li></ul>
 					</div>
 			</div>		
 				
