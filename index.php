@@ -11,6 +11,7 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="styles.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <!-- Image Preloader -->
 <script type="text/javascript" src="http://ajax.googlesapi.com/ajax/libs/jquery/jquery.min.js"></script>
@@ -42,23 +43,8 @@
 			  ?>
     	<div id="content">
         	<div id="right">
-			<div class="tit_bot">
-				<div class="tit">
-       		      <h1><span class="tit_span">  Archives&nbsp;</span></h1>
-				</div>
-					<div class="text">
-				<?php
-				$req1 = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d %M %Y\') AS date_fr FROM articles ORDER BY date DESC');
-				while($donnees = $req1->fetch())
-				{
-				?><b><?php
-				$dateTime = strtotime($donnees['date_fr']);
-				$date = strftime("%d %B %G", $dateTime);
-				echo $date;?></b> - <a href="article.php?id=<?php echo $donnees['id'];?>"><?php echo $donnees['titre'];?></a><br><?php
-				}
-				?>
-					</div>
-			</div>		
+					
+				<?php include('right.php'); ?>
 				
            	</div>  
             <div id="left">
@@ -100,11 +86,10 @@
          <!-- footer begins -->
             <div id="footer">
 
-
+			<?php include('footer.php'); ?>
 
 			
-			<div>Icônes faites par <a href="http://www.freepik.com" title="Freepik">Freepik</a> de <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> est licencié par <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-            Copyright  2016    <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="admin">Administration</a> | <a href="http://github.com/ndpnews/ndpnews">Code source sur Github</a></div>
+			</div>
 
 
 				<!-- footer ends -->
