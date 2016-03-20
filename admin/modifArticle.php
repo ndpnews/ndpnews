@@ -47,7 +47,7 @@
 
 			<legend>Nouvel article</legend>
 				Titre : <input type="text" name="titre" class="form-control" value="<?php echo $donnees['titre']; ?> ">
-				Auteur : <input type="text" name="auteur" class="form-control" value="<?php echo $donnees['auteur']; ?>">
+				Auteur : <input type="text" name="auteur" class="form-control" value="<?php echo htmlspecialchars($donnees['auteur']); ?>">
 				Article : <textarea name="contenu" id="editor1" rows="10" cols="80" classe="formcontrol"><?php echo $donnees['contenu'];?></textarea>
 				<input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
 				<br><input type="submit" value="Modifier" >
