@@ -10,6 +10,7 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="styles.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <!-- Image Preloader -->
 <script type="text/javascript" src="http://ajax.googlesapi.com/ajax/libs/jquery/jquery.min.js"></script>
@@ -55,9 +56,9 @@
 				
 				$donnees = $req1->fetch();
 				?><ul>
-					<li><?php $dateTime = strtotime($donnees['date_fr']);$annee = strftime("%G", $dateTime);echo $annee;?>
+					<li><input type="checkbox" id="c1" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i><label for="c1"> <?php $dateTime = strtotime($donnees['date_fr']);$annee = strftime("%G", $dateTime);echo $annee;?></label>
 						<ul>
-							<li><?php $dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?>
+							<li><input type="checkbox" id="c2" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c2"> <?php $dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?></label>
 								<ul>
 									<li><b><?php
 												$dateTime = strtotime($donnees['date_fr']);
@@ -67,8 +68,10 @@
 									
 				<?php
 				//Fin
+				$nC = 3;
 				while($donnees = $req1->fetch())
 				{
+					
 					$dateTime = strtotime($donnees['date_fr']);
 					//Si c'est la même année
 					if($annee == strftime("%G", $dateTime)){
@@ -87,7 +90,7 @@
 							//Si c'est pas le même mois
 							//Mettre le nouveau mois puis l'article
 						{
-							?></ul></li><li><?php $dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?>
+							?></ul></li><li><input type="checkbox" id="c<?php echo $nC;?>" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c<?php echo $nC;?>"> <?php $nC = $nC + 1;$dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?></label>
 							<ul><li><b><?php
 												$dateTime = strtotime($donnees['date_fr']);
 												$date = strftime("%d", $dateTime);
@@ -99,8 +102,8 @@
 					else
 					{
 						//Si c'est pas la même année?>
-						</ul></li></ul></li><li><? $dateTime = strtotime($donnees['date_fr']);$annee = strftime("%G", $dateTime);echo $annee;?><ul>
-						<li><?php $dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?><ul>
+						</ul></li></ul></li><li><input type="checkbox" id="c<?php echo $nC;?>" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c<?php echo $nC;?>"> <?php $nC = $nC + 1; $dateTime = strtotime($donnees['date_fr']);$annee = strftime("%G", $dateTime);echo $annee;?></label><ul>
+						<li><input type="checkbox" id="c<?php echo $nC;?>" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c<?php echo $nC;?>"> <?php $nC = $nC + 1; $dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?></label><ul>
 						<li><b><?php
 												$dateTime = strtotime($donnees['date_fr']);
 												$date = strftime("%d", $dateTime);
