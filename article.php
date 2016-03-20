@@ -23,18 +23,7 @@
 <div id="main">
 <!-- header begins -->
 <div id="header">
-    <div id="logo"> <img src="images/logo.png"/>  </div>
-    <div id="buttons">
-          <a href="index.php" class="but"  title="">Accueil</a>
-          <a href="#" class="but" title="">Atelier Coding</a>
-          <a href="#"  class="but" title="">HTML</a>
-          <a href="#"  class="but" title="">CSS</a>
-          <a href="#" class="but" title="">Javascript</a>
-		  <a href="#" class="but" title="">Créer un site web</a>
-		  <a href="#" class="but" title="">Tuto en vidéo</a>
-		  <a href="#" class="but" title="">HTML Editor</a>
-		  <a href="#" class="but" title="">SVG Editor</a>
-    </div>
+    <?php include('header.php');?>
 </div>
 <!-- header ends -->
     <!-- content begins -->
