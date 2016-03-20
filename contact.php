@@ -36,7 +36,7 @@
 				<?php include('right.php'); ?>
 				
            	</div> 
-			
+	<div id="left">		
 	<div class="tit_bot">
 		<div class="tit">
        		      <h1><span class="tit_span"><img src="images/square-matrix.png" style="width:15px;height:15px;"> Nous contacter&nbsp;</span></h1>
@@ -50,6 +50,7 @@
 			
 			</form>
 		</div>
+	</div>
 	</div>
 	 
 	 <div id="footer">
