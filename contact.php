@@ -36,15 +36,33 @@
 				<?php include('right.php'); ?>
 				
            	</div> 
-	<div id="left">		
+	<div id="left">
 	<div class="tit_bot">
 		<div class="tit">
        		      <h1><span class="tit_span"><img src="images/square-matrix.png" style="width:15px;height:15px;"> Nous contacter&nbsp;</span></h1>
 		</div>
 		<div class="text">
+		<?php
+		if(isset($_POST['email']) AND isset($_POST['message']) and isset($_POST['nom']))
+		{
+			$to = 'admin@ndp-news.tk';
+			$subject = 'Contact ' . $_POST['nom'];
+			$message = $_POST['message'];
+			$headers = 'From: '.$_POST['email'] . "\r\n" .
+			$_POST['email'] . "\r\n" .
+			'X-Mailer: PHP/' . phpversion();
+
+			mail($to, $subject, $message, $headers);
+		}
+		
+		
+		
+		
+		?>
 			<form method="post" action="contact.php">
 			<br>
-				Votre E-Mail :   <input type="text" name="email"><br>
+				Votre E-Mail :      <input type="email" name="email"><br>
+				Votre Nom : <input type="text" name="nom"><br>
 				Votre message : <textarea name="message" rows="10" cols="50"></textarea>
 				<input type="submit" value="Envoyer !">
 			
