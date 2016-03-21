@@ -4,6 +4,6 @@
           <a href="#"  class="but" title="">Articles</a>
 		  <a href="#" class="but" title="">Tutos</a>
           <a href="#"  class="but" title="">Qui sommes-nous ?</a>
-          <a href="#" class="but" title="">Proposer un article</a>
+          <a href="ideeArticle.php" class="but" title="">Proposer un article</a>
 		  <a href="contact.php" class="but" title="">Contact</a>
     </div>
