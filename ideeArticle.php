@@ -39,7 +39,7 @@
 	<div id="left">
 	<div class="tit_bot">
 		<div class="tit">
-       		      <h1><span class="tit_span"><img src="images/square-matrix.png" style="width:15px;height:15px;"> Nous contacter&nbsp;</span></h1>
+       		      <h1><span class="tit_span"><img src="images/square-matrix.png" style="width:15px;height:15px;"> Donner des idées d'articles&nbsp;</span></h1>
 		</div>
 		<div class="text">
 		<?php
