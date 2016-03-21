@@ -15,7 +15,10 @@ margin: 0;
 .invisible {
   display: none;
 }
-
+.formulaire {
+	display: block;
+	width: 150px;
+}
 /* habillage */
 li {
   display: block;

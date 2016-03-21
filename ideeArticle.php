@@ -64,7 +64,7 @@
 			//==========
 			 
 			//=====Définition du sujet.
-			$sujet = "Contact ". $_POST['nom'];
+			$sujet = "Idée ". $_POST['nom'];
 			//=========
 			 
 			//=====Création du header de l'e-mail.
@@ -102,11 +102,11 @@
 		
 		
 		?>
-			<form class="formulaire" method="post" action="contact.php">
+			<form method="post" action="contact.php" class="formulaire">
 			<br>
 				Votre E-Mail :      <input type="email" name="email"><br>
 				Votre Nom : <input type="text" name="nom"><br>
-				Votre message : <textarea name="message" rows="10" cols="50"></textarea>
+				Votre Idée : <textarea name="message" rows="10" cols="50"></textarea>
 				<input type="submit" value="Envoyer !">
 			
 			</form>
