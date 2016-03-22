@@ -64,7 +64,7 @@
 			//==========
 			 
 			//=====Définition du sujet.
-			$sujet = "Contact ". $_POST['nom'];
+			$sujet = "Idee ". $_POST['nom'];
 			//=========
 			 
 			//=====Création du header de l'e-mail.
