@@ -93,7 +93,6 @@
 			 
 			//=====Envoi de l'e-mail.
 			mail($mail,$sujet,$message,$header);
-			echo $message;
 			echo $header;
 			//==========
 
