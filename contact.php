@@ -93,6 +93,7 @@
 			 
 			//=====Envoi de l'e-mail.
 			mail($mail,$sujet,$message,$header);
+			echo htmlspecialchars($header);/n
 			echo htmlspecialchars($header);
 			//==========
 
