@@ -20,6 +20,9 @@ margin: 0;
 	width: 150px;
 }
 /* habillage */
+label:hover{
+	text-decoration: underline;
+}
 li {
   display: block;
   font-size: 15px;
