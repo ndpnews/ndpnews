@@ -64,12 +64,12 @@
 			//==========
 			 
 			//=====Définition du sujet.
-			$sujet = "Idée ". $_POST['nom'];
+			$sujet = "Contact ". $_POST['nom'];
 			//=========
 			 
 			//=====Création du header de l'e-mail.
-			$header = "From: \"".$_POST['nom']."\"<".$_POST['nom'].">".$passage_ligne;
-			$header.= "Reply-to: \"".$_POST['nom']."\"<".$_POST['nom'].">".$passage_ligne;
+			$header = "From: \"".$_POST['nom']."\"<".$_POST['email'].">".$passage_ligne;
+			$header.= "Reply-to: \"".$_POST['nom']."\"<".$_POST['email'].">".$passage_ligne;
 			$header.= "MIME-Version: 1.0".$passage_ligne;
 			$header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 			//==========
@@ -92,7 +92,7 @@
 			//==========
 			 
 			//=====Envoi de l'e-mail.
-			mail($mail,$sujet,$message,$header);
+			mail($mail,$sujet,$_POST['message']);
 			//==========
 
 
