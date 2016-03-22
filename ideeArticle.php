@@ -55,6 +55,10 @@
 			{
 				$passage_ligne = "\n";
 			}
+			$_POST['message'] = $_POST['email']. "
+			
+			".$_POST['message'];
+
 			//=====Déclaration des messages au format texte et au format HTML.
 			$message_txt = $_POST['message'];
 			//==========
