@@ -102,7 +102,7 @@
 		
 		
 		?>
-			<form method="post" action="contact.php" class="formulaire">
+			<form method="post" action="ideeArticle.php" class="formulaire">
 			<br>
 				Votre E-Mail :      <input type="email" name="email"><br>
 				Votre Nom : <input type="text" name="nom"><br>
