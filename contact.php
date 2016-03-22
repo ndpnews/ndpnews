@@ -56,7 +56,7 @@
 				$passage_ligne = "\n";
 			}
 			//=====Déclaration des messages au format texte et au format HTML.
-			$message_txt = $_POST['message'];
+			
 			//==========
 			 
 			//=====Création de la boundary
@@ -85,7 +85,6 @@
 			//=====Ajout du message au format HTML
 			$message.= "Content-Type: text/html; charset=\"ISO-8859-1\"".$passage_ligne;
 			$message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
-			$message.= $passage_ligne.$message_html.$passage_ligne;
 			//==========
 			$message.= $passage_ligne."--".$boundary."--".$passage_ligne;
 			$message.= $passage_ligne."--".$boundary."--".$passage_ligne;
