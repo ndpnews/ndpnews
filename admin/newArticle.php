@@ -42,6 +42,9 @@
 			<legend>Nouvel article</legend>
 				Titre : <input type="text" name="titre" class="form-control">
 				Auteur : <input type="text" name="auteur" class="form-control">
+				Catégories : <select name="categorie" class="form-control"><option class="form-control "value="article">Article</option>
+				<option value="tuto" class="form-control">Tutoriel</option>
+				</select>
 				Article : <textarea name="contenu" id="editor1" rows="10" cols="80" classe="formcontrol"></textarea>
 				
 				<br><input type="submit" value="Créer" >
