@@ -22,6 +22,7 @@ margin: 0;
 /* habillage */
 label:hover{
 	text-decoration: underline;
+	cursor:pointer
 }
 li {
   display: block;
