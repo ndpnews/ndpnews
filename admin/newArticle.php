@@ -25,8 +25,8 @@
 		global $bdd;
 		
 		if($_POST["contenu"] != "" AND $_POST['auteur'] != "" AND $_POST["titre"] != ""){
-			$req = $bdd->prepare('INSERT INTO articles (titre,contenu,date,auteur) VALUES(?,?,NOW(),?)');
-			$req->execute(array($_POST['titre'], $_POST['contenu'], $_POST['auteur']));
+			$req = $bdd->prepare('INSERT INTO articles (titre,contenu,date,auteur,categorie) VALUES(?,?,NOW(),?)');
+			$req->execute(array($_POST['titre'], $_POST['contenu'], $_POST['auteur'], $_POST['categorie']));
 			echo "Article envoyé !";
 			echo "<br>";
 		}
