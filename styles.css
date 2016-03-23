@@ -6,7 +6,10 @@
     from {margin-left: 2000px;}
     to {margin-left: 437px;}
 }
-
+@keyframes main3 {
+    from {margin-left: 437px;}
+    to {margin-left: 2000px;}
+}
 *
 {
 border: 0;

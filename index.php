@@ -61,7 +61,7 @@
 							$img = substr($donnees['contenu'], $pos1, $longeur);
 							echo $img;?>...
 						
-						<div class="read"><a onClick="document.getElementById('main').style.webkitAnimationName = 'main2';" href="article.php?id=<?php echo $donnees['id']; ?>"><img src="images/add.png" alt="" style="width:25px;height:25px;"/></a>
+						<div class="read"><a onClick="document.getElementById('main').style.webkitAnimationName = 'main3';" href="article.php?id=<?php echo $donnees['id']; ?>"><img src="images/add.png" alt="" style="width:25px;height:25px;"/></a>
 						</div>
                     	<br />
 					</div>
