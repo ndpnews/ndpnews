@@ -42,7 +42,7 @@
             <div id="left">
 			  <?php
 			  
-			  $req = $bdd->query("SELECT id, titre, contenu, auteur, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%i\') AS date_fr FROM articles WHERE categorie='article' ORDER BY date DESC LIMIT 0, 10");
+			  $req = $bdd->query('SELECT id, titre, contenu, auteur, DATE_FORMAT(date, \'%d/%m/%Y à %Hh%i\') AS date_fr FROM articles WHERE categorie="article" ORDER BY date DESC LIMIT 0, 10');
 			  while($donnees = $req->fetch())
 			  {
 				  ?>
