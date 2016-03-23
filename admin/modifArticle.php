@@ -49,8 +49,8 @@
 			<legend>Nouvel article</legend>
 				Titre : <input type="text" name="titre" class="form-control" value="<?php echo $donnees['titre']; ?> ">
 				Auteur : <input type="text" name="auteur" class="form-control" value="<?php echo htmlspecialchars($donnees['auteur']); ?>">
-				Catégorie : <select name="categorie" class="form-control"><option class="form-control" value="article" <?php if ($_POST['categorie']=="article"){echo "selected";}?>>Article</option>
-				<option value="tuto" class="form-control" <?php if ($_POST['categorie']=="tuto"){echo "selected";}?>>Tutoriel</option>
+				Catégorie : <select name="categorie" class="form-control"><option class="form-control" value="article" <?php if ($donnees['categorie']=="article"){echo "selected";}?>>Article</option>
+				<option value="tuto" class="form-control" <?php if ($donnees['categorie']=="tuto"){echo "selected";}?>>Tutoriel</option>
 				</select>
 				Article : <textarea name="contenu" id="editor1" rows="10" cols="80" classe="formcontrol"><?php echo $donnees['contenu'];?></textarea>
 				<input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
