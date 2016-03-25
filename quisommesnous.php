@@ -58,14 +58,7 @@
 					 
 					</div>
            	    </div>
-				<?php
-			  }
-				?>
             </div>
-			<?php
-			// Fin de la boucle des billets
-			$req->closeCursor();
-			?>
             <br />
          <!-- footer begins -->
             <div id="footer">
