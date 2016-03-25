@@ -27,7 +27,7 @@ label:hover{
 	text-decoration: underline;
 	cursor:pointer
 }
-li {
+.liste{
   display: block;
   font-size: 15px;
   padding: 0.2em;
