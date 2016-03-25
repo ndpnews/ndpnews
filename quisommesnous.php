@@ -45,15 +45,17 @@
        		      <h1><span class="tit_span"><img src="images/square-matrix.png" style="width:15px;height:15px;"> Qui sommes-nous ?&nbsp;</span></h1>
 				</div>
                   	<div class="text">
-					 <p>Nous faisons tous partie de l'atelier coding, il y a:
-					M. OMRANE qui dirige l'atelier coding
-					Antonin BLANCKAERT
-					Aymeric BARROY
-					Maxence BARROY qui code le site
-					Thomas ZYCH qui rédige des articles
-					Nassim BENGHEZAL
+					 <p>Nous faisons tous partie de l'atelier coding, il y a:<br>
+					<ul>
+					<li>M. OMRANE qui dirige l'atelier coding</li>
+					<li>Antonin BLANCKAERT</li>
+					<li>Aymeric BARROY</li>
+					<li>Maxence BARROY qui code le site</li>
+					<li>Thomas ZYCH qui rédige des articles</li>
+					<li>Nassim BENGHEZAL</li>
+					</ul></p>
 					 
-					Nous espérons que ce site vous plaira car nous y avons passé beaucoup de temps. Vous pouvez nous contacter <a href="contact.php"> ici</a> ou nous donner des idées <a href="ideeArticle.php">ici</a>.
+					<p>Nous espérons que ce site vous plaira car nous y avons passé beaucoup de temps. Vous pouvez nous contacter <a href="contact.php"> ici</a> ou nous donner des idées <a href="ideeArticle.php">ici</a>.</p>
 					
 					 
 					</div>
