@@ -9,11 +9,11 @@
 				
 				$donnees = $req1->fetch();
 				?><ul>
-					<li><input class="invisible" type="checkbox" id="c1" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i><label for="c1"> <?php $dateTime = strtotime($donnees['date_fr']);$annee = strftime("%G", $dateTime);echo $annee;?></label>
+					<li class="liste"><input class="invisible" type="checkbox" id="c1" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i><label for="c1"> <?php $dateTime = strtotime($donnees['date_fr']);$annee = strftime("%G", $dateTime);echo $annee;?></label>
 						<ul>
-							<li><input class="invisible" type="checkbox" id="c2" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c2"> <?php $dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?></label>
+							<li class="liste"><input class="invisible" type="checkbox" id="c2" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c2"> <?php $dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?></label>
 								<ul>
-									<li><b><?php
+									<li class="liste"><b><?php
 												$dateTime = strtotime($donnees['date_fr']);
 												$date = strftime("%d", $dateTime);
 												echo $date;?></b> - <a href="article.php?id=<?php echo $donnees['id'];?>"><?php echo $donnees['titre'];?></a>
@@ -32,7 +32,7 @@
 						if($mois == strftime("%B", $dateTime))
 						{
 							//Mettre l'article
-						?><li><b><?php
+						?><li class="liste"><b><?php
 									$dateTime = strtotime($donnees['date_fr']);
 											$date = strftime("%d", $dateTime);
 											echo $date;?></b> - <a href="article.php?id=<?php echo $donnees['id'];?>"><?php echo $donnees['titre'];?></a>
@@ -43,8 +43,8 @@
 							//Si c'est pas le même mois
 							//Mettre le nouveau mois puis l'article
 						{
-							?></ul></li><li><input class="invisible" type="checkbox" id="c<?php echo $nC;?>" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c<?php echo $nC;?>"> <?php $nC = $nC + 1;$dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?></label>
-							<ul><li><b><?php
+							?></ul></li><li class="liste"><input class="invisible" type="checkbox" id="c<?php echo $nC;?>" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c<?php echo $nC;?>"> <?php $nC = $nC + 1;$dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?></label>
+							<ul><li class="liste"><b><?php
 												$dateTime = strtotime($donnees['date_fr']);
 												$date = strftime("%d", $dateTime);
 												echo $date;?></b> - <a href="article.php?id=<?php echo $donnees['id'];?>"><?php echo $donnees['titre'];?></a>
@@ -55,9 +55,9 @@
 					else
 					{
 						//Si c'est pas la même année?>
-						</ul></li></ul></li><li><input class="invisible" type="checkbox" id="c<?php echo $nC;?>" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c<?php echo $nC;?>"> <?php $nC = $nC + 1; $dateTime = strtotime($donnees['date_fr']);$annee = strftime("%G", $dateTime);echo $annee;?></label><ul>
-						<li><input class="invisible" type="checkbox" id="c<?php echo $nC;?>" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c<?php echo $nC;?>"> <?php $nC = $nC + 1; $dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?></label><ul>
-						<li><b><?php
+						</ul></li></ul></li><li class="liste"><input class="invisible" type="checkbox" id="c<?php echo $nC;?>" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c<?php echo $nC;?>"> <?php $nC = $nC + 1; $dateTime = strtotime($donnees['date_fr']);$annee = strftime("%G", $dateTime);echo $annee;?></label><ul>
+						<li class="liste"><input class="invisible" type="checkbox" id="c<?php echo $nC;?>" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c<?php echo $nC;?>"> <?php $nC = $nC + 1; $dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?></label><ul>
+						<li class="liste"><b><?php
 												$dateTime = strtotime($donnees['date_fr']);
 												$date = strftime("%d", $dateTime);
 												echo $date;?></b> - <a href="article.php?id=<?php echo $donnees['id'];?>"><?php echo $donnees['titre'];?></a>
