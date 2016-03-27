@@ -20,6 +20,7 @@
 	</head>
 	<body>
 	<div class="container">
+		<p>(Veillez à ne pas dépasser 640px de longueur lorsque vous mettez une image (Vous pouvez régler cela lorsque vous insérez l'image))</p>
 		<?php
 		include_once('bdd.php');
 		global $bdd;
