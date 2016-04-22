@@ -23,7 +23,7 @@
 				{
 					$infosfichier = pathinfo($_FILES['fichier']['name']);
 					$extension_upload = $infosfichier['extension'];
-					$extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
+					$extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png', 'PNG');
 					if (in_array($extension_upload, $extensions_autorisees))
 					{
 						$nom = basename($_FILES['fichier']['name']);
