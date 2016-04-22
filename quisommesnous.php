@@ -50,7 +50,7 @@
 					<li>M. OMRANE qui dirige l'atelier coding</li>
 					<li>Antonin BLANCKAERT qui s'occupe de publier les articles des autres classes</li>
 					<li>Aymeric BARROY</li>
-					<li>Maxence BARROY quicode le site</li>
+					<li>Maxence BARROY qui code le site</li>
 					<li>Thomas ZYCH qui rédige des articles</li>
 					<li>Nassim BENGHEZAL</li>
 					</ul></p>
