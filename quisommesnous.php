@@ -53,6 +53,7 @@
 					<li>Maxence BARROY qui code le site</li>
 					<li>Thomas ZYCH qui rédige des articles</li>
 					<li>Nassim BENGHEZAL</li>
+					<li>Guillaume DEHU qui rédige les articles</li>
 					</ul></p>
 					 
 					<p>Nous espérons que ce site vous plaira car nous y avons passé beaucoup de temps. Vous pouvez nous contacter <a href="contact.php"> ici</a> ou nous donner des idées <a href="ideeArticle.php">ici</a>.</p>
