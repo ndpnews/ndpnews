@@ -10,6 +10,7 @@
 <title>NDP-News</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
+<link href="lightbox/src/css/lightbox.css" rel="stylesheet">
 <link href="styles.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
@@ -59,7 +60,14 @@
 							$pos1 = strpos($donnees['contenu'], '<img');
 							$pos2 = strpos($donnees['contenu'], '>', $pos1);$pos2 = $pos2 + 1;$longeur = $pos2 - $pos1;	
 							$img = substr($donnees['contenu'], $pos1, $longeur);
-							echo $img;?>...
+							
+							$doc = new DOMDocument();
+							$doc->loadHTML($donnees['contenu']);
+							$xpath = new DOMXPath($doc);
+							$src = $xpath->evaluate("string(//img/@src)");
+							
+							?><a data-lightbox="image-1" href="<?php echo $src;?>">;<?php
+							echo $img; ?></a>...
 						
 						<div class="read"><a onClick="document.getElementById('main').style.webkitAnimationName = 'main3';" href="article.php?id=<?php echo $donnees['id']; ?>"><img src="images/add.png" alt="" style="width:25px;height:25px;"/></a>
 						</div>
@@ -88,5 +96,7 @@
         </div>
     <!-- content ends -->
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="lightbox/src/js/lightbox.js"></script>
 </body>
 </html>
