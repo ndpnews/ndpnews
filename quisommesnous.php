@@ -48,7 +48,7 @@
 					 <p>Nous faisons tous partie de l'atelier coding, il y a:<br>
 					<ul>
 					<li>M. OMRANE qui dirige l'atelier coding</li>
-					<li>Antonin BLANCKAERT qui s'occupe de publier les articles des autres classes</li>
+					<li>Antonin BLANCKAERT qui s'occupe des publications des articles</li>
 					<li>Aymeric BARROY qui rédige les articles </li> 
 					<li>Maxence BARROY qui code le site</li>
 					<li>Thomas ZYCH qui rédige les articles </li>
