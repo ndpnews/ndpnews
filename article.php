@@ -3,6 +3,60 @@
 	setlocale(LC_TIME, "fr_FR");
 	include_once('admin/bdd.php');
 	global $bdd;
+	function getSrc($html){
+
+	$doc = new DOMDocument();
+	$doc->loadHTML($html);
+	$xpath = new DOMXPath($doc);
+	$src = $xpath->query("//img/@src");
+	
+	$srcs = array();
+	foreach($src as $s){
+		array_push($srcs,$s->nodeValue);
+		
+	}
+	$html = setA($html, $srcs);
+	return $html;
+}
+function setA($html, $srcList){
+	$i = 0;
+	
+	//Trouver pos
+	$pos[$i][0] = strpos($html,"<img");
+	echo $pos[$i][0];
+
+	//Insérer a
+	$href="<a data-lightbox='image-1' alt='' href='" . $srcList[$i] . "'>";
+	echo htmlspecialchars($href);
+	$html = substr_replace($html, $href, $pos[$i][0], 0);
+
+	//Trouver pos2
+	$pos[$i][1] = strpos($html,">",  $pos[$i][0]+ strlen($href));
+	
+	$pos[$i][1] = $pos[$i][1] + 1;
+	echo $pos[$i][1];
+
+	//Insérer /a
+	$html = substr_replace($html, "</a>", $pos[$i][1], 0);
+
+	$i = $i + 1;
+	print_r($srcList[i]);
+	while ($pos[$i-1][0]){
+		$pos[$i][0] = strpos($html,"<img", $pos[$i - 1][1]);
+		echo "test".$pos[$i][0];
+		
+		$href="<a data-lightbox='image-1' href='" . $srcList[$i] . "'>";
+		$html = substr_replace($html, "$href", $pos[$i][0], 0);
+
+		$pos[$i][1] = strpos($html,">",  $pos[$i][0]+strlen($href));
+		$pos[$i][1] = $pos[$i][1] + 1;
+		
+		$html = substr_replace($html, "</a>", $pos[$i][1], 0);
+		
+		$i = $i + 1;
+	}
+	return $html;
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--Code par Maxence BARROY -->
@@ -10,13 +64,12 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>NDP News</title>
+<link href="lightbox/src/css/lightbox.css" rel="stylesheet">
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="styles.css" rel="stylesheet" type="text/css" />
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<!-- Image Preloader -->
-<script type="text/javascript" src="http://ajax.googlesapi.com/ajax/libs/jquery/jquery.min.js"></script>
 
 </head>
 <body>
@@ -51,7 +104,7 @@
                     	<?php echo $donnees['date_fr']; ?><br>
 			<?php echo $donnees['auteur']; ?>
 						<br>
-						<?php echo $donnees['contenu'] ?>
+						<?php echo getSrc($donnees['contenu']); ?>
 						
 						
                     	<br />
@@ -77,5 +130,8 @@
         </div>
     <!-- content ends -->
 </div>
+<script type="text/javascript" src="http://ajax.googlesapi.com/ajax/libs/jquery/jquery.min.js"></script>
+<script src="/lightbox/src/js/lightbox.js"></script>
 </body>
+
 </html>
