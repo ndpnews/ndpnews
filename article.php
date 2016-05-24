@@ -23,18 +23,15 @@ function setA($html, $srcList){
 	
 	//Trouver pos
 	$pos[$i][0] = strpos($html,"<img");
-	echo $pos[$i][0];
 
 	//Insérer a
 	$href="<a data-lightbox='image-1' alt='' href='" . $srcList[$i] . "'>";
-	echo htmlspecialchars($href);
 	$html = substr_replace($html, $href, $pos[$i][0], 0);
 
 	//Trouver pos2
 	$pos[$i][1] = strpos($html,">",  $pos[$i][0]+ strlen($href));
 	
 	$pos[$i][1] = $pos[$i][1] + 1;
-	echo $pos[$i][1];
 
 	//Insérer /a
 	$html = substr_replace($html, "</a>", $pos[$i][1], 0);
@@ -43,7 +40,6 @@ function setA($html, $srcList){
 	print_r($srcList[i]);
 	while ($pos[$i-1][0]){
 		$pos[$i][0] = strpos($html,"<img", $pos[$i - 1][1]);
-		echo "test".$pos[$i][0];
 		
 		$href="<a data-lightbox='image-1' href='" . $srcList[$i] . "'>";
 		$html = substr_replace($html, "$href", $pos[$i][0], 0);
