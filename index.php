@@ -56,7 +56,7 @@
                     	<?php echo $donnees['date_fr']; ?><br>
 			<b><?php echo $donnees['auteur']; ?></b>
 						<br>
-						<?php echo strip_tags(substr($donnees['contenu'], 0, 300), '<br><p>');
+						<?php echo strip_tags(substr($donnees['contenu'], 0, 300), '<br><p><iframe>');
 							$pos1 = strpos($donnees['contenu'], '<img');
 							$pos2 = strpos($donnees['contenu'], '>', $pos1);$pos2 = $pos2 + 1;$longeur = $pos2 - $pos1;	
 							$img = substr($donnees['contenu'], $pos1, $longeur);
