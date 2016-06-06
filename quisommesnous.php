@@ -49,7 +49,7 @@
 					<ul>
 					<li>M. OMRANE qui dirige l'atelier coding</li>
 					<li>Antonin BLANCKAERT qui s'occupe des publications des articles</li>
-					<li>Aymeric BARROY qui rédige les articles </li> 
+					<li>Aymeric BARROY qui corrige les articles </li> 
 					<li>Maxence BARROY qui code le site</li>
 					<li>Thomas ZYCH qui rédige les articles </li>
 					<li>Nassim BENGHEZAL qui rédige les articles </li>
