@@ -1,8 +1,4 @@
-<div class="tit_bot">
-				<div class="tit">
-       		      <h1><span class="tit_span">  Archives&nbsp;</span></h1>
-				</div>
-					<div class="text" style="padding: 0px">
+
 				<?php
 				$req1 = $bdd->query('SELECT id, titre, DATE_FORMAT(date, \'%d %M %Y\') AS date_fr FROM articles ORDER BY date DESC');
 				//Premier fetch
@@ -26,9 +22,9 @@
 				{
 					
 					$dateTime = strtotime($donnees['date_fr']);
-					//Si c'est la mÃªme annÃ©e
+					//Si c'est la même année
 					if($annee == strftime("%G", $dateTime)){
-						//Si c'est le mÃªme mois
+						//Si c'est le même mois
 						if($mois == strftime("%B", $dateTime))
 						{
 							//Mettre l'article
@@ -40,7 +36,7 @@
 						<?php
 						}
 						else
-							//Si c'est pas le mÃªme mois
+							//Si c'est pas le même mois
 							//Mettre le nouveau mois puis l'article
 						{
 							?></ul></li><li class="liste"><input class="invisible" type="checkbox" id="c<?php echo $nC;?>" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c<?php echo $nC;?>"> <?php $nC = $nC + 1;$dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?></label>
@@ -54,7 +50,7 @@
 					}
 					else
 					{
-						//Si c'est pas la mÃªme annÃ©e?>
+						//Si c'est pas la même année?>
 						</ul></li></ul></li><li class="liste"><input class="invisible" type="checkbox" id="c<?php echo $nC;?>" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c<?php echo $nC;?>"> <?php $nC = $nC + 1; $dateTime = strtotime($donnees['date_fr']);$annee = strftime("%G", $dateTime);echo $annee;?></label><ul>
 						<li class="liste"><input class="invisible" type="checkbox" id="c<?php echo $nC;?>" /><i class="fa fa-angle-double-right"></i><i class="fa fa-angle-double-down"></i> <label for="c<?php echo $nC;?>"> <?php $nC = $nC + 1; $dateTime = strtotime($donnees['date_fr']);$mois = strftime("%B", $dateTime);echo $mois;?></label><ul>
 						<li class="liste"><b><?php
@@ -67,5 +63,3 @@
 					
 				}
 				?></ul></li></ul></li></ul>
-					</div>
-			</div>
