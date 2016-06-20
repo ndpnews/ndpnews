@@ -16,6 +16,8 @@
 						<li<?php if(stripos($_SERVER['REQUEST_URI'],"catArticle.php")!=false){echo " class='active'";} ?>><a href="catArticle.php">Articles</a></li>
 						<li<?php if(stripos($_SERVER['REQUEST_URI'],"tuto.php")!=false){echo " class='active'";} ?>><a href="tuto.php">Tutoriels</a></li>
 						<li<?php if(stripos($_SERVER['REQUEST_URI'],"quisommesnous.php")!=false){echo " class='active'";} ?>><a href="quisommesnous.php">Qui sommes-nous ?</a></li>
+						<li<?php if(stripos($_SERVER['REQUEST_URI'],"ideeArticle.php")!=false){echo " class='active'";} ?>><a href="ideeArticle.php">Proposer un article</a></li>
+						<li<?php if(stripos($_SERVER['REQUEST_URI'],"contact.php")!=false){echo " class='active'";} ?>><a href="contact.php">Nous contacter</a></li>
 						
 					</ul>
 				</div>

@@ -1,48 +1,23 @@
 <?php
 	date_default_timezone_set('Europe/Paris');
 	setlocale(LC_TIME, "fr_FR");
-	
+?>
+<html>
+	<head>
+		<title>Contact - NDP-News</title>
+		<?php include('head.php'); ?>
+	</head>
+	<body>
+		<?php
 	
 			  include_once('admin/bdd.php');
 			  global $bdd;
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--Code par Maxence BARROY -->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>NDP-News</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="styles.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-<!-- Image Preloader -->
-<script type="text/javascript" src="http://ajax.googlesapi.com/ajax/libs/jquery/jquery.min.js"></script>
-
-	<link rel="icon" type="image/png" href="images/favicon.png" />
-</head>
-<body>
-
-<div id="main">
-<!-- header begins -->
-<div id="header">
-
-    <?php include('header.php');?>
-</div>
-<div id="content">
-	 <div id="right">
-					
-				<?php include('right.php'); ?>
-				
-           	</div> 
-	<div id="left">
-	<div class="tit_bot">
-		<div class="tit">
-       		      <h1><span class="tit_span"><img src="images/square-matrix.png" style="width:15px;height:15px;"> Nous contacter&nbsp;</span></h1>
-		</div>
-		<div class="text">
-		<?php
+			  ?>
+		<?php include_once("nav.php");?>
+		<img src="/images/logo2.png" class="img-responsive" style="margin-top: 50px;">
+		<div class="container">
+			<div class="row">
+			<?php
 		if(isset($_POST['email']) AND isset($_POST['message']) and isset($_POST['nom']))
 		{
 			
@@ -57,6 +32,7 @@
 			}
 			$_POST['message'] = $_POST['email']. "
 ".$_POST['message'];
+
 			//=====Déclaration des messages au format texte et au format HTML.
 			$message_txt = $_POST['message'];
 			//==========
@@ -104,28 +80,44 @@
 		
 		
 		?>
-			<form method="post" action="contact.php" class="formulaire">
-			<br>
-				Votre E-Mail :      <input type="email" name="email"><br>
-				Votre Nom : <input type="text" name="nom"><br>
-				Votre message : <textarea name="message" rows="10" cols="50"></textarea>
-				<input type="submit" value="Envoyer !">
-			
-			</form>
-		</div>
-	</div>
-	</div>
-	 
-	 <div id="footer">
-
-			<?php include('footer.php'); ?>
-
-			
-			</div>
-
-</div>
-
-
-</div>
-</body>
+				<div class="col-md-8">
+					<h1 class="page-header">
+						Nous contacter
+					</h1>
+					<form class="form-horizontal" method="post" action="ideeArticle.php" class="formulaire">
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+							<div class="col-sm-10">
+								<input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputNom" class="col-sm-2 control-label">Nom</label>
+							<div class="col-sm-10">
+								<input type="text" name="nom" class="form-control" id="inputNom" placeholder="Nom">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputIdee" class="col-sm-2 control-label">Votre idée</label>
+							<div class="col-sm-10">
+								<textarea name="message" class="form-control" id="inputIdee" placeholder="Votre idée" rows="10" cols="50"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button type="submit" class="btn btn-default">Envoyer</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-default page-header">
+						<div class="panel-heading">Archives</div>
+						<div class="panel-body">
+							<?php include('right.php'); ?>
+						</div>
+						
+					</div>
+				</div>
+	</body>
 </html>
