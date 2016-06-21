@@ -95,6 +95,7 @@
 							<div class="panel-body" style="padding-top:5px;padding-bottom:5px;"><style>.radio:hover{text-decoration: none;}.radio > label:hover{text-decoration:none !important;cursor: default !important;}</style>
 									<?php if(isset($_POST['note'])){
 										echo '<p style="margin: 0px;">Merci pour votre avis</p>';
+										echo '</div>';
 									}
 									else{
 										?>
@@ -129,14 +130,15 @@
 											5
 										</label>
 									</div>
+									</div>
+									<div class="panel-footer">
+										<button type="submit" class="btn btn-default">Envoyer !</button>
+									</div>
 									</form>
 									<?php
 									}?>
 									
-							</div>
-							<div class="panel-footer">
-								<button type="submit" class="btn btn-default">Envoyer !</button>
-							</div>
+							
 							
 					</div>
 				</div>
