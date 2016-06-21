@@ -91,8 +91,14 @@
 					</div>
 					<div class="panel panel-primary">
 						<div class="panel-heading">Combien noteriez-vous le site ?</div>
-						<form method="post" action="index.php" style="margin-bottom: 0px;margin-top:0px;">	
+						
 							<div class="panel-body" style="padding-top:5px;padding-bottom:5px;"><style>.radio:hover{text-decoration: none;}.radio > label:hover{text-decoration:none !important;cursor: default !important;}</style>
+									<?php if(isset($_POST['note'])){
+										echo '<p style="margin: 0px;">Merci pour votre avis</p>';
+									}
+									else{
+										?>
+									<form method="post" action="index.php" style="margin-bottom: 0px;margin-top:0px;">	
 									<div class="radio">
 										<label>
 											<input type="radio" name="note" id="note1" value="1">
@@ -119,16 +125,19 @@
 									</div>
 									<div class="radio">
 										<label>
-											<input type="radio" name="note" id="note5" value="5" checked>
+											<input type="radio" name="note" id="note5" value="5">
 											5
 										</label>
 									</div>
+									</form>
+									<?php
+									}?>
 									
 							</div>
 							<div class="panel-footer">
 								<button type="submit" class="btn btn-default">Envoyer !</button>
 							</div>
-						</form>	
+							
 					</div>
 				</div>
 				
