@@ -73,7 +73,40 @@
 					<div class="panel panel-primary">
 						<div class="panel-heading">Combien noteriez-vous le site ?</div>
 						<div class="panel-body">
-						
+							<form method="post" action="index.php">	
+								<div class="checkbox">
+									<label>
+										<input type="radio" name="note" id="note1" value="1">
+										1
+									</label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="radio" name="note" id="note2" value="2">
+										2
+									</label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="radio" name="note" id="note3" value="3">
+										3
+									</label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="radio" name="note" id="note4" value="4">
+										4
+									</label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="radio" name="note" id="note5" value="5">
+										5
+									</label>
+								</div>
+								
+								
+							</form>	
 						</div>
 					</div>
 				</div>
