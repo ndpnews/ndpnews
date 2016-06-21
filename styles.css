@@ -33,20 +33,20 @@ label:hover{
   padding: 0.2em;
 }
 
-input ~ ul {
+.archive ~ ul {
  display: none;
 }
-input:checked ~ ul {
+.archive:checked ~ ul {
  display: block;
 }
 
-input ~ .fa-angle-double-down {
+.archive ~ .fa-angle-double-down {
  display: none;
 }
-input:checked ~ .fa-angle-double-right {
+.archive:checked ~ .fa-angle-double-right {
  display: none;
 }
-input:checked ~ .fa-angle-double-down {
+.archive:checked ~ .fa-angle-double-down {
  display: inline;
 }
 img
