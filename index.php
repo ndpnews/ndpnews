@@ -70,6 +70,12 @@
 						</div>
 						
 					</div>
+					<div class="panel panel-primary">
+						<div class="panel-heading">Combien noteriez-vous le site ?</div>
+						<div class="panel-body">
+						
+						</div>
+					</div>
 				</div>
 				
 			</div>
