@@ -119,7 +119,7 @@
 									</div>
 									<div class="radio">
 										<label>
-											<input type="radio" name="note" id="note5" value="5">
+											<input type="radio" name="note" id="note5" value="5" checked>
 											5
 										</label>
 									</div>
