@@ -5,15 +5,34 @@
 <html>
 	<head>
 		<title>NDP-News</title>
-		<?php include('head.php'); ?>
+		<?php include('head.php'); 
+		include_once('admin/bdd.php');
+			  global $bdd;?>
+		<?php if(isset($_POST['note'])){
+			switch($_POST['note'])
+			{
+				case 1:
+					$bdd->exec('UPDATE poll SET note1 = note1 + 1');
+				break;
+				case 2:
+					$bdd->exec('UPDATE poll SET note2 = note2 + 1');
+				break;
+				case 3:
+					$bdd->exec('UPDATE poll SET note3 = note3 + 1');
+				break;
+				case 4:
+					$bdd->exec('UPDATE poll SET note4 = note4 + 1');
+				break;
+				case 5:
+					$bdd->exec('UPDATE poll SET note5 = note5 + 1');
+				break;
+			}
+		}
+			
+		?>
 	</head>
 	
 	<body>
-	<?php
-	
-			  include_once('admin/bdd.php');
-			  global $bdd;
-			  ?>
 		<?php include_once("nav.php");?>
 		<img src="/images/logo2.png" class="img-responsive" style="margin-top: 50px;">
 		<div class="container">
